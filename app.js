@@ -1,2 +1,0 @@
-const scraper = require('./scraper');
-
