@@ -1,0 +1,50 @@
+//Creating a new element and appending it to the page
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<script>
+// Create a new list item element
+var newItem = document.createElement("li");
+newItem.textContent = "Item 3";
+
+// Get the list element
+var list = document.getElementById("myList");
+
+// Append the new item to the list
+list.appendChild(newItem);
+</script>
+
+</body>
+</html>
+//Creating a new element and appending it to the page
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<script>
+// Create a new list item element
+var newItem = document.createElement("li");
+newItem.textContent = "Item 3";
+
+// Get the list element
+var list = document.getElementById("myList");
+
+// Append the new item to the list
+list.appendChild(newItem);
+</script>
+
+</body>
+</html>

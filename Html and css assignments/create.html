@@ -1,0 +1,29 @@
+//Creating a new element and appending it to the page
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+  <li>Mango</li>
+  <li>Orange</li>
+</ul>
+<button id="b1">Get</button>
+
+<script>
+var a=document.getElementById("b1");
+// Create a new list item element
+var newItem = document.createElement("li");
+newItem.textContent = "Grapes";
+
+// Get the list element
+var list = document.getElementById("myList");
+
+// Append the new item to the list
+list.appendChild(newItem);
+</script>
+
+</body>
+</html>
+//Creating a new element and appending it to the page
+

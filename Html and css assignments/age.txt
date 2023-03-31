@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Mathematics</h1>
+  <script> 
+   
+   let age = prompt("What is your age?");
+
+if (age < 18) {
+  console.log("You are too young to vote.");
+  alert("Too young");
+
+} else {
+  console.log("You can vote.");
+  alert("Adult");
+}
+
+
+
+  
+
+</script>
+
+    
+  </body>
+</html>

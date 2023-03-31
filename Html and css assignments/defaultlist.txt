@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>colors.</title>
+      <h1 id="a1">COLORS</h1>
+
+	
+<body>
+      
+
+	
+      <ul id="Colors">
+  	<li>Blue</li>
+  	<li>Black</li>
+  	<li>Orange</li>
+	</ul>
+      <button id="myButton">Click me</button>
+</head>
+   <script>
+      const list = document.querySelector('#Colors');
+
+	list.addEventListener('click', function(event) {
+  	const clickedItem = event.target;
+
+    	for (const item of items) {
+      if (item === clickedItem) {
+        item.classList.add('selected');
+      } else {
+        item.classList.remove('selected');
+      }
+    }
+  
+    });
+
+   </script>
+		
+
+</body>
+</html>
+
+
+     
+

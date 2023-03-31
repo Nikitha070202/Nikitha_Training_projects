@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Day And Date</h1>
+    <script>   
+	let today = new Date();
+
+let day = today.toLocaleDateString('en-US', { weekday: 'long' });
+let hours = today.getHours();
+let minutes = today.getMinutes();
+let seconds = today.getSeconds();
+let amOrPm = hours >= 12 ? 'PM' : 'AM';
+hours = hours % 12;
+hours = hours ? hours : 12;
+minutes = minutes < 10 ? '0' + minutes : minutes;
+seconds = seconds < 10 ? '0' + seconds : seconds;
+let time = hours + ' ' + amOrPm + ' : ' + minutes + ' : ' + seconds;
+
+console.log('Today is: ' + day);
+console.log('Current time is: ' + time);
+
+</script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Good Morning</h1>
+    <script>
+    alert("Hello World!"); // Displays an alert box with the message "Hello World!"
+</script>
+
+    </script>
+  </body>
+</html>

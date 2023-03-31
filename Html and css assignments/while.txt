@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Mathematics</h1>
+  <script> 
+   
+   let i = 10;
+while (i >= 1) {
+  console.log(i);
+  alert(i);
+  i--;
+}
+
+  
+
+
+</script>
+
+    
+  </body>
+</html>

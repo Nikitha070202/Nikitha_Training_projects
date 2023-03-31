@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button and Paragraph </title>
+</head>
+<body>
+
+	<p>At Tecnotree we believe that each individual plays a pivotal and unique role in crafting the success story of an organisation.<br> With 40 years of experience and deep domain knowledge, we consider our people to be our biggest asset.<br> Our aim at Tecnotree is to provide all individuals with the flexibility to explore different opportunities and roles which allows them to realise their full potential. We are proud to be an organisation where our employee’s passion for work converges with the vision of the organisation and where each individual believes that we win together.</p>
+
+	<button onclick="changeText()">Click me</button>
+
+	<script>
+		function changeText() {
+			document.getElementsById("changeText()");
+                  document.style.color="Blue";
+		}
+	</script>
+
+</body>
+</html>

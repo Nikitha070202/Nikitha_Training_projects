@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing the content.</title>
+</head>
+<body>
+      <form id="myForm">
+  	<label for="name">Name:</label>
+  	<input type="text" id="name" name="name">
+  	<label for="email">Email:</label>
+  	<input type="email" id="email" name="email">
+  	<button type="submit">Submit</button>
+	</form>
+
+      <script>
+          const form = document.querySelector('#myForm');
+
+	    form.addEventListener('submit', function(event) {
+  	    event.preventDefault();
+  	    const nameInput = document.querySelector('#name');
+  	    const emailInput = document.querySelector('#email');
+  	    const nameValue = nameInput.value;
+  	    const emailValue = emailInput.value;
+  	    alert(`Name: ${nameValue}\nEmail: ${emailValue}`);
+	    });
+
+        
+       </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing the content.</title>
+</head>
+<body>
+      <h1 id="a1">Good Morning</h1>
+
+	<p> Click the button below to change the text.</p>
+
+	<button id="a1">Click me</button>
+
+	<script>
+		var button = document.getElementById("a1");
+            button.textContent="The Button was clicked!";
+		
+
+		button.addEventListener("click", function() {
+			alert( "The button was clicked!");
+		});
+	</script>
+
+</body>
+</html>

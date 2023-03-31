@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Day And Date</h1>
+  <script>   
+	let today = new Date();
+	let dd = today.getDate();
+	let mm = today.getMonth() + 1; 
+	let yyyy = today.getFullYear();
+
+	if (dd < 10) {
+  	dd = '0' + dd;
+	}
+
+if (mm < 10) {
+  mm = '0' + mm;
+}
+
+let date1 = mm + '-' + dd + '-' + yyyy;
+let date2 = mm + '/' + dd + '/' + yyyy;
+let date3 = dd + '-' + mm + '-' + yyyy;
+let date4 = dd + '/' + mm + '/' + yyyy;
+
+console.log('mm-dd-yyyy format: ' + date1);
+console.log('mm/dd/yyyy format: ' + date2);
+console.log('dd-mm-yyyy format: ' + date3);
+console.log('dd/mm/yyyy format: ' + date4);
+alert(date1);
+alert(date2);
+alert(date3);
+alert(date4);
+
+
+
+
+</script>
+
+    
+  </body>
+</html>

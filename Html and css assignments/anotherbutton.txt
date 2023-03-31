@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing the content.</title>
+</head>
+<body>
+      <h1 id="a1">Good Morning</h1>
+
+	<p> Adding Another Button</p>
+
+	<button id="a1">Click </button>
+      <button id="a2">Submit</button>
+
+
+	<script>
+		var button = document.getElementById("a1");
+            var button = document.getElementById("a2");
+            button.addEventListener("click", function() {
+			alert("To know more details,click here")
+		});
+            
+
+		
+	</script>
+
+</body>
+</html>

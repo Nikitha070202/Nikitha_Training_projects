@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Mathematics</h1>
+    <script> 
+    -// Create an array and p
+rint its elements to the console using a loop
+ let nums = [1, 2, 3, 4, 5]; 
+for (let i = 0; i < nums.length; i++) {
+
+  console.log(nums[i]);
+
+}
+
+
+   
+
+
+</script>
+
+    
+  </body>
+</html>

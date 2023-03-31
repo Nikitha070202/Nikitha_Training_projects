@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h1>Day And Date</h1>
+  <script>   
+	// Wait for the page to finish loading
+window.onload = function() {
+  // Define a function to print the contents of the current window
+  function printWindow() {
+    window.print();
+  }
+  
+  // Call the printWindow function when the user clicks a button with ID "print-button"
+  var printButton = document.getElementById("print-button");
+  printButton.onclick = printWindow;
+};
+
+
+</script>
+
+    
+  </body>
+</html>
