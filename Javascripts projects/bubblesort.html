@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bubble Sort Algorithm</title>
+    <style>
+        #container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+}
+
+p {
+  font-size: 24px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Bubble Sort Algorithm</h1>
+      <p>Click the button to sort the array:</p>
+      <button onclick="bubbleSort()">Sort Array</button>
+      <p id="unsorted-array">Unsorted Array: </p>
+      <p id="sorted-array">Sorted Array: </p>
+    </div>
+    <script>
+        let unsortedArray = [7, 4, 9, 2, 1, 5, 8, 3, 6];
+let sortedArray = [];
+
+function bubbleSort() {
+  sortedArray = [...unsortedArray];
+  for (let i = 0; i < sortedArray.length - 1; i++) {
+    for (let j = 0; j < sortedArray.length - i - 1; j++) {
+      if (sortedArray[j] > sortedArray[j+1]) {
+        let temp = sortedArray[j];
+        sortedArray[j] = sortedArray[j+1];
+        sortedArray[j+1] = temp;
+      }
+    }
+  }
+  document.getElementById("unsorted-array").innerHTML = "Unsorted Array: " + unsortedArray.join(", ");
+  document.getElementById("sorted-array").innerHTML = "Sorted Array: " + sortedArray.join(", ");
+}
+
+    </script>
+  </body>
+</html>

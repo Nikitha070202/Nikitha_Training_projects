@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Intersection of Two Arrays</title>
+	<style>
+		h1 {
+			text-align: center;
+      font-size:30px;
+		}
+		label {
+			display: inline-block;
+			width: 100px;
+			margin-bottom: 10px;
+			font-size: 20px;
+		}
+		input[type=text] {
+			width: 200px;
+			padding: 5px;
+			border: 1px solid black;
+			border-radius: 4px;
+			box-sizing: border-box;
+			background-color:peachpuff;
+		}
+		input[type=text]:hover {
+			box-shadow: 0 12px 16px 0 lightsteelblue,0 17px 50px powderblue;
+	  		background-color:goldenrod;
+
+
+		}
+		button {
+			background-color: #4CAF50;
+			color:black;
+			padding: 10px 20px;
+			border:1px solid black ;
+			border-radius: 8px;
+			cursor: pointer;
+			float: right;
+		}
+		.container {
+			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 500px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 20px;
+		}
+		.result {
+			margin-top: 20px;
+			font-weight: bold;
+		}
+    	button:hover {
+	  		box-shadow: 0 12px 16px 0 rgba(141, 43, 43, 0.24),0 17px 50px 0 rgba(201, 55, 55, 0.19);
+	  		background-color:blue;
+
+   	    }
+		div {
+			background-color: royalblue;
+		}
+		body {
+			background-color: peachpuff;
+			background-image:url("https://static7.depositphotos.com/1229718/728/i/600/depositphotos_7281628-stock-photo-fork-in-the-road.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Intersection of Two Arrays</h1>
+		<form>
+			<div>
+				<label for="array1"><u>Array 1:</u></label>
+				<input type="text" id="array1" placeholder="Enter array 1">
+			</div>
+			<div>
+				<label for="array2"><u>Array 2:</u></label>
+				<input type="text" id="array2" placeholder="Enter array 2">
+			</div>
+			<button type="button" onclick="findIntersection()">Find Intersection</button>
+		</form>
+		<div class="result" id="result"></div>
+	</div>
+	<script>
+		function findIntersection() {
+			// Get the input values
+			let array1 = document.getElementById("array1").value.split(",");
+			let array2 = document.getElementById("array2").value.split(",");
+
+			// Find the intersection of the two arrays
+			let intersection = array1.filter(x => array2.includes(x));
+
+			// Display the result
+			document.getElementById("result").innerHTML = `The intersection of the two arrays is [${intersection}]`;
+		}
+	</script>
+</body>
+</html>

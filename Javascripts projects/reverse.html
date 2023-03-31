@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+  <style>
+    /* Style the input and button */
+    input[type="text"] {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+    
+    button {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      background-color: blue;
+      color: white;
+      cursor: pointer;
+    }
+    /* Add styles to the output paragraph */
+    #output {
+        margin-top: 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Reverse Words</h1>
+  <form>
+    <label for="input-string">Enter a string:</label>
+    <input type="text" id="input-string" placeholder="Enter a string...">
+    <button type="submit">Reverse</button>
+  </form>
+  <p id="output"></p>
+
+  <script>
+    // Get references to the input and output elements
+const inputElement = document.getElementById("input-string");
+const outputElement = document.getElementById("output");
+
+// Add an event listener to the form
+const form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the input string from the input element
+  const inputString = inputElement.value;
+
+  // Reverse the order of the words in the input string
+  const reversedString = reverseWords(inputString);
+
+  // Display the reversed string on the page
+  outputElement.textContent = reversedString;
+});
+
+// Define a function that reverses the order of words in a string
+function reverseWords(str) {
+  const words = str.split(" ");
+  const reversedWords = words.reverse();
+  const reversedString = reversedWords.join(" ");
+  return reversedString;
+}
+
+  </script>
+</body>
+</html>

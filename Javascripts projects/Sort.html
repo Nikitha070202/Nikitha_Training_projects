@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><u>Sort Array of Objects</u></title>
+	<style>
+		table ,th,td {
+			border: 4px solid black;
+			padding: 30px;
+			border-collapse:collapse;
+            text-align:center;
+            background-color: powderblue;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    body{
+        text-align: center;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnEyYW6yb7hrMqLWQu4_K0-XpQJBzupaxhrg&usqp=CAU");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+		
+	</style>
+</head>
+<body>
+	<h1>Sort Array of Objects</h1>
+	<table id="myTable">
+		<tr1>
+			<th onclick="sortTable('name')"><b>NAME</b></th>
+			<th onclick="sortTable('age')"><b>AGE</b></th>
+			<th onclick="sortTable('salary')"><b>SALARY</b></th>
+		</tr1>
+		<tr>
+			<td>Ankitha</td>
+			<td>22</td>
+			<td>15000</td>
+		</tr>
+		<tr>
+			<td>Poojitha</td>
+			<td>19</td>
+			<td>16000</td>
+		</tr>
+		<tr>
+			<td>Nikitha</td>
+			<td>21</td>
+			<td>14000</td>
+		</tr>
+        <tr>
+			<td>Rakshitha</td>
+			<td>24</td>
+			<td>20000</td>
+		</tr>
+        <tr>
+			<td>Sangeetha</td>
+			<td>28</td>
+			<td>24000</td>
+		</tr>
+	</table>
+
+	<script>
+        // Define the array of objects
+var people = [	{name: "Ankitha", age: 22, salary: 15000},	{name: "Poojitha", age: 19, salary: 16000},	{name: "Nikitha", age: 21, salary: 14000},{name: "Rakshitha", age: 24, salary: 20000},{name: "Sangeetha", age: 28, salary: 24000}];
+
+// Function to sort the table by a specified property
+function sortTable(property) {
+	// Sort the array by the specified property
+	people.sort(function(a, b) {
+		if (a[property] < b[property]) {
+			return -1;
+		}
+		else if (a[property] > b[property]) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	});
+
+	// Get the table element
+	var table = document.getElementById("myTable");
+
+	// Remove all existing rows from the table
+	while (table.rows.length > 1) {
+		table.deleteRow(1);
+	}
+
+	// Add the sorted rows to the table
+	for (var i = 0; i < people.length; i++) {
+		var row = table.insertRow(i+1);
+		var nameCell = row.insertCell(0);
+		var ageCell = row.insertCell(1);
+		var salaryCell = row.insertCell(2);
+		nameCell.innerHTML = people[i].name;
+		ageCell.innerHTML = people[i].age;
+		salaryCell.innerHTML = people[i].salary;
+	}
+}
+
+    </script>
+</body>
+</html>
+
+		

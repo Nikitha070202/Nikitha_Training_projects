@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find First Non-Repeating Character</title>
+    <style>
+        #container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+input[type=text] {
+  font-size: 24px;
+  padding: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+}
+
+p {
+  font-size: 24px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Find First Non-Repeating Character</h1>
+      <p>Enter a string:</p>
+      <input type="text" id="input-string">
+      <button onclick="findFirstNonRepeatingChar()">Find</button>
+      <p id="output"></p>
+    </div>
+    <script>
+        function findFirstNonRepeatingChar() {
+  let input = document.getElementById("input-string").value;
+  let charCount = {};
+  for (let i = 0; i < input.length; i++) {
+    if (charCount[input[i]] === undefined) {
+      charCount[input[i]] = 1;
+    } else {
+      charCount[input[i]]++;
+    }
+  }
+  for (let i = 0; i < input.length; i++) {
+    if (charCount[input[i]] === 1) {
+      document.getElementById("output").innerHTML = "The first non-repeating character is: " + input[i];
+      return;
+    }
+  }
+  document.getElementById("output").innerHTML = "No non-repeating character found.";
+}
+
+    </script>
+  </body>
+</html>

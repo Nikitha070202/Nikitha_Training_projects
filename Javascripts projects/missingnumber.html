@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Missing Number</title>
+    <style>
+        #container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+input[type=text] {
+  font-size: 24px;
+  padding: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+}
+
+p {
+  font-size: 24px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Find Missing Number</h1>
+      <p>Enter a list of comma-separated integers:</p>
+      <input type="text" id="input-array">
+      <button onclick="findMissingNumber()">Find Missing Number</button>
+      <p id="missing-number"></p>
+    </div>
+    <script>
+        function findMissingNumber() {
+  let input = document.getElementById("input-array").value;
+  let array = input.split(",");
+  for (let i = 0; i < array.length; i++) {
+    array[i] = parseInt(array[i]);
+  }
+  let n = array.length + 1;
+  let sum = (n * (n+1)) / 2;
+  let arraySum = array.reduce((a, b) => a + b, 0);
+  let missingNumber = sum - arraySum;
+  document.getElementById("missing-number").innerHTML = "The missing number is: " + missingNumber;
+}
+
+    </script>
+  </body>
+</html>

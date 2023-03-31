@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Search Algorithm</title>
+    <style>
+        .container {
+  margin: 20px auto;
+  width: 50%;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 70%;
+}
+
+button {
+  padding: 10px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #006C9B;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Binary Search Algorithm</h1>
+    <div class="container">
+      <form>
+        <label for="array">Enter an array of integers:</label>
+        <input type="text" id="array" name="array"><br>
+
+        <label for="target">Enter the target value:</label>
+        <input type="text" id="target" name="target"><br>
+
+        <button type="button" onclick="binarySearch()">Search</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+        function binarySearch() {
+  const arrayInput = document.getElementById("array");
+  const targetInput = document.getElementById("target");
+  const resultDiv = document.getElementById("result");
+
+  const array = arrayInput.value.split(",").map(Number);
+  const target = Number(targetInput.value);
+
+  let startIndex = 0;
+  let endIndex = array.length - 1;
+
+  while (startIndex <= endIndex) {
+    let middleIndex = Math.floor((startIndex + endIndex) / 2);
+
+    if (array[middleIndex] === target) {
+      resultDiv.textContent = `Target found at index ${middleIndex}`;
+      return;
+    } else if (array[middleIndex] < target) {
+      startIndex = middleIndex + 1;
+    } else {
+      endIndex = middleIndex - 1;
+    }
+  }
+
+  resultDiv.textContent = "Target not found in array";
+}
+
+    </script>
+  </body>
+</html>
