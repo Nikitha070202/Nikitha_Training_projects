@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #8697f5;
+      }
+      form {
+        border: 2px solid #b2c5f3;
+        background-color: rgb(178, 213, 247);
+        padding: 20px;
+        width: 300px;
+        margin: 50px auto;
+      }
+      h2 {
+        text-align: center;
+        color: #4d4d4d;
+      }
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button[type=submit] {
+        background-color: #040348;
+        color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 50px;
+        opacity: 0.5;
+      }
+      button[type=submit]:hover:not([disabled]) {
+        opacity: 0.8;
+      }
+      button[type=submit]:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <h2>Login</h2>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter Username" pattern="[A-Za-z0-9_-]+" title="Username can only contain letters, numbers, underscores, and dashes" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter Password" pattern=".{8,}" title="Password must be at least 8 characters long" required>
+
+      <button type="submit" disabled>Log In</button>
+      <button type="submit">Cancel</button>
+      <br>
+  <a href="www.google.com">Forgot password?</a>
+    </form>
+    <script>
+      var usernameInput = document.getElementById("username");
+      var passwordInput = document.getElementById("password");
+      var loginButton = document.querySelector("button[type=submit]");
+
+      function validateForm() {
+        var username = usernameInput.value;
+        var password = passwordInput.value;
+        if (username == "" || password == "") {
+          alert("Please fill in all fields");
+          return false;
+        } else if (username == "Nikitha" && password == "Nikitha07") {
+          alert("Login successful!");
+          return true;
+        } else {
+          alert("Incorrect username or password. Please try again.");
+          return false;
+        }
+      }
+
+       function checkInputs() {
+        var usernameValue = usernameInput.value.trim();
+        var passwordValue = passwordInput.value.trim();
+
+        if (usernameValue !== "" && passwordValue !== "") {
+          loginButton.disabled = false;
+        } else {
+          loginButton.disabled = true;
+        }
+      }
+
+      usernameInput.addEventListener("input", checkInputs);
+      passwordInput.addEventListener("input", checkInputs);  
+    </script>
+  </body>
+</html>
