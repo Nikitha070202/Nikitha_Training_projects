@@ -1,5 +1,0 @@
-fname = input("Input your First Name : ")
-lname = input("Input your Last Name : ")
-length=len(fname+lname)
-print("The length of the string is",length)
-print ("Hello  " + lname + " " + fname)
